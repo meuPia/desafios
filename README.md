@@ -8,14 +8,14 @@ Ele atua como um "Banco de Dados Estático" (Git as a Database). O [meuPiá Lab]
 
 Cada desafio deve ser um arquivo `.json` salvo na raiz ou em subpastas organizadas. O formato obrigatório é:
 
-\`\`\`json
+```json
 {
   "id": "identificador_unico_sem_espacos",
   "titulo": "Nome Amigável do Desafio",
   "instrucoes": "Texto em Markdown com a explicação e exemplos.",
   "codigoTeste": "Chamadas da biblioteca meuPia-testes (ex: esperar_igual) que serão injetadas invisivelmente."
 }
-\`\`\`
+```
 
 ---
 
