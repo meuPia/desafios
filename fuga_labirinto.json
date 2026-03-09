@@ -1,0 +1,17 @@
+{
+  "id": "fuga_labirinto",
+  "titulo": "Fuga do Labirinto (A*)",
+  "descricao": "Ajude o agente a chegar no objetivo [9, 9] desviando da parede central.",
+  "codigoInicial": "algoritmo \"Fuga\"\nusar \"grid\"\n\ninicio\n    // Seu algoritmo de busca aqui\nfim_algoritmo",
+  "codigoTeste": "escreva(\"[TESTE_OK] Avaliando mapa...\")",
+  "mapa": {
+    "largura": 10,
+    "altura": 10,
+    "paredes": [
+      [3, 1], [3, 2], [3, 3], [3, 4],
+      [3, 5], [3, 6], [3, 7]
+    ],
+    "inicio": [0, 0],
+    "objetivo": [9, 9]
+  }
+}
