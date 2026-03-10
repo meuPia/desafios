@@ -1,0 +1,7 @@
+{
+    "id": "fio_de_ariadne",
+    "titulo": "Missão: O Fio de Ariadne (Reconstruindo a Rota)",
+    "descricao": "### Desafio\nO algoritmo chegou ao destino, mas precisa gerar o caminho de volta usando o mapa de 'pais' (de onde viemos para chegar onde estamos). \n\nCrie a função `reconstruir_rota_str(caminho_trilhado, inicio, destino)`. Ela deve usar um laço `enquanto` para voltar do destino até o início, concatenando as chaves em uma string para o motoboy ler.\n\n*Dica: Use `atual <- caminho_trilhado[atual]` para dar um passo para trás na história!*",
+    "codigoInicial": "algoritmo \"Ariadne\"\n    var\n        atual, rota : texto\n\nfuncao reconstruir_rota_str(dicionario_pais, inicio, destino)\n        atual <- destino\n        rota <- destino\n        \n        // Enquanto o 'atual' não for igual ao 'inicio', continue voltando!\n        enquanto atual != inicio faca\n            // 1. Pegue o 'pai' do nó atual no dicionário\n            // 2. Adicione na string 'rota'\n        fim_enquanto\n        \n        retorne rota\n    fim_funcao\n\ninicio\n    escreva(\"Testando reconstrução de rota...\")\nfim_algoritmo",
+    "codigoTeste": "var pais : dicionario\npais[\"2,2\"] <- \"1,2\"\npais[\"1,2\"] <- \"0,2\"\npais[\"0,2\"] <- \"0,1\"\npais[\"0,1\"] <- \"0,0\"\nesperar_igual(reconstruir_rota_str(pais, \"0,0\", \"2,2\"), \"2,2 -> 1,2 -> 0,2 -> 0,1 -> 0,0\", \"Caminho reconstruído de trás para frente com sucesso\")"
+  }
