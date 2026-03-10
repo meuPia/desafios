@@ -1,0 +1,7 @@
+{
+    "id": "memoria_fotografica",
+    "titulo": "Missão: Memória Fotográfica",
+    "descricao": "### Desafio\nPara não andar em círculos, o A* usa uma 'Closed List' (lista de ruas visitadas). Em Python usamos `set()`, mas aqui vamos simular isso usando um dicionário!\n\nCrie a função `foi_visitado(memoria, coordenada)`. Ela deve olhar para o dicionário `memoria`. Se a chave existir e for `verdadeiro`, retorne `verdadeiro`. Caso contrário, retorne `falso`.\n\n**Exemplo:**\nSe a nossa memória registrou a coordenada \"0,1\" como `verdadeiro`, a função diz que já passamos por lá.",
+    "codigoInicial": "algoritmo \"Memoria\"\n    var\n        dicionario_visitas : dicionario\n\nfuncao foi_visitado(memoria, coordenada)\n        // Verifique se a coordenada já está registrada na memória\n        \n        retorne falso // Altere para a sua lógica\n    fim_funcao\n\ninicio\n        // Simulando a inserção no dicionário\n        dicionario_visitas[\"0,0\"] <- verdadeiro\n        dicionario_visitas[\"0,1\"] <- verdadeiro\n        \n        escreva(\"Já visitamos a rua 0,1? \")\n        escreva(foi_visitado(dicionario_visitas, \"0,1\"))\nfim_algoritmo",
+    "codigoTeste": "var mem : dicionario\nmem[\"1,1\"] <- verdadeiro\nmem[\"2,2\"] <- verdadeiro\nesperar_igual(foi_visitado(mem, \"1,1\"), verdadeiro, \"Reconheceu rua já visitada\")\nesperar_igual(foi_visitado(mem, \"0,0\"), falso, \"Reconheceu rua inédita\")"
+  }
