@@ -1,6 +1,7 @@
 {
     "id": "calculo_gn_taximetro",
     "titulo": "Missão: O Taxímetro - Calculando o g(n)",
-    "instrucoes": "### Desafio\nO valor de `g(n)` representa o custo real **acumulado** do ponto de partida até o ponto atual da busca. Imagine que o agente deu 3 passos pelo mapa, e cada estrada tinha um peso/custo diferente. Crie uma função chamada `calcular_gn` que receba o custo destes três passos (`p1`, `p2` e `p3`) e retorne o custo total exato da rota percorrida.\n\n**Exemplo:**\n`calcular_gn(15, 20, 10)` deve retornar `45`.",
+    "descricao": "### Desafio\nO valor de `g(n)` representa o custo real **acumulado** do ponto de partida até o ponto atual da busca. Imagine que o agente deu 3 passos pelo mapa, e cada estrada tinha um peso/custo diferente. Crie uma função chamada `calcular_gn` que receba o custo destes três passos (`p1`, `p2` e `p3`) e retorne o custo total exato da rota percorrida.\n\n**Exemplo:**\n`calcular_gn(15, 20, 10)` deve retornar `45`.",
+    "codigoInicial": "algoritmo \"Taximetro\"\n\nfuncao calcular_gn(p1, p2, p3)\n    var\n        custo_total : inteiro\n    inicio\n        // O g(n) é o custo do passado (o que já andamos).\n        // Calcule a soma de todos os passos dados.\n        \n        retorne custo_total\n    fim_funcao\n\ninicio\n    escreva(\"Calculando o g(n) de uma rota...\")\n    escreva(\"Passos de 15, 20 e 10. Total: \" + calcular_gn(15, 20, 10))\nfim_algoritmo",
     "codigoTeste": "esperar_igual(calcular_gn(15, 20, 10), 45, \"Soma dos três passos\")\nesperar_igual(calcular_gn(5, 5, 5), 15, \"Passos com custos iguais\")\nesperar_igual(calcular_gn(0, 10, 2), 12, \"Passo inicial sem custo\")"
-}
+  }
