@@ -3,7 +3,7 @@
   "titulo": "Fuga do Labirinto (Sensores)",
   "descricao": "Ajude o agente a chegar no objetivo [9, 9] desviando da parede central. Use a função `grid_olhar(x, y)` para identificar obstáculos!",
   "codigoInicial": "algoritmo \"Fuga\"\nusar \"grid\"\n\nvar\n    radar : dicionario\n    prox_x, prox_y : inteiro\n\ninicio\n    prox_x <- 3\n    prox_y <- 1\n    \n    // Testando o nosso novo sensor visual\n    radar <- grid_olhar(prox_x, prox_y)\n    \n    escreva(\"Analisando a célula [\" + prox_x + \", \" + prox_y + \"]...\")\n    escreva(\"Tipo: \" + radar[\"tipo\"])\n    \n    se radar[\"passavel\"] == falso entao\n        escreva(\"Alerta: Caminho bloqueado!\")\n    senao\n        escreva(\"Caminho livre.\")\n    fim_se\n\n    // Testando a leitura de um poço de ácido\n    radar <- grid_olhar(4, 8)\n    se radar[\"tipo\"] == \"acido\" entao\n        escreva(\"Cuidado! Este ácido causa \" + radar[\"dano\"] + \" de dano.\")\n    fim_se\nfim_algoritmo",
-  "codigoTeste": "escreva(\"\\n--- AVALIAÇÃO DA MISSÃO ---\")\nteste_igual(grid_chegou_objetivo(9, 9), verdadeiro, \"O agente sobreviveu e alcançou a extração em [9, 9]?\")",
+  "codigoTeste": "escreva(\"\\n--- AVALIAÇÃO DA MISSÃO ---\")\nesperar_igual(grid_chegou_objetivo(9, 9), verdadeiro, \"O agente sobreviveu e alcançou a extração em?\")",
   "mapa": {
     "largura": 10,
     "altura": 10,
