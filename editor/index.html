@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de Desafio - meuPia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Editor de Desafio - meuPia</h1>
+    
+    <div class="field">
+      <label for="id">ID</label>
+      <input type="text" id="id" placeholder="ex: desafio-001">
+    </div>
+    
+    <div class="field">
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" placeholder="Título do desafio">
+    </div>
+    
+    <div class="field">
+      <label for="descricao">Descrição (Markdown)</label>
+      <div class="textarea-container">
+        <textarea id="descricao" placeholder="Descrição em Markdown..."></textarea>
+        <button type="button" id="previewBtn" class="btn-secondary">Preview</button>
+      </div>
+      <div id="preview" class="preview-box hidden"></div>
+    </div>
+    
+    <div class="field">
+      <label>Código Inicial</label>
+      <textarea id="codigoInicial"></textarea>
+    </div>
+    
+    <div class="field">
+      <label>Código de Teste</label>
+      <textarea id="codigoTeste"></textarea>
+    </div>
+    
+    <div class="buttons">
+      <button id="openJson">Abrir</button>
+      <button id="importJson">Importar JSON</button>
+      <button id="exportJson">Exportar JSON</button>
+      <button id="editMapa">Ir para editor de mapa</button>
+    </div>
+    
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="editor/meupia-lang.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

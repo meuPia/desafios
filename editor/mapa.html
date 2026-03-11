@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de Mapa - meuPia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Editor de Mapa</h1>
+    
+    <div class="field">
+      <label for="mapa">Mapa (JSON)</label>
+      <textarea id="mapa"></textarea>
+    </div>
+    
+    <div class="buttons">
+      <button id="importMapa">Importar mapa</button>
+      <button id="saveMapa">Salvar mapa</button>
+    </div>
+    
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
