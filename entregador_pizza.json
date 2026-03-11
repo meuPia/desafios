@@ -7,8 +7,8 @@
   "mapa": {
     "largura": 10,
     "altura": 10,
-    "inicio":,
-    "objetivo":,
+    "inicio":[0,1],
+    "objetivo":[9,9],
     "celulas": [
       { "x": 2, "y": 2, "tipo": "parede", "passavel": false },
       { "x": 3, "y": 2, "tipo": "parede", "passavel": false },
