@@ -1,0 +1,7 @@
+{
+  "id": "frames_facets",
+  "titulo": "Exercício 2: Frames (Gatilhos IF-ADDED e IF-NEEDED)",
+  "descricao": "### Desafio\nOs *Frames* de Marvin Minsky usam gatilhos para reagir a dados. \n1. **Facet IF-ADDED (Escrita):** Complete a função `atualizar_distancia`. Se o valor for maior que 15, retorne `falso` (bloqueando a entrega). Senão, grave no `frame_pedido` e retorne `verdadeiro`.\n2. **Facet IF-NEEDED (Leitura):** Complete a função `calcular_total_dinamico`. Ela não lê um valor pronto, ela calcula na hora: preço do item + (distância * 2.0).",
+  "codigoInicial": "algoritmo \"Frames_Facets\"\n\nvar\n    frame_pedido : dicionario\n\nfuncao atualizar_distancia(nova_distancia)\n    // Regra IF-ADDED: O motoboy não vai além de 15km\n    \n    // ❌ ESCREVA SEU CÓDIGO AQUI\n    retorne falso\nfim_funcao\n\nfuncao calcular_total_dinamico()\n    // Regra IF-NEEDED: Calcula sob demanda o preco_item + (distancia * 2.0)\n    \n    // ❌ ESCREVA SEU CÓDIGO AQUI\n    retorne 0.0\nfim_funcao\n\ninicio\n    frame_pedido <- {\"item\": \"Pizza Binária\", \"preco_item\": 40.0, \"distancia\": 0.0}\n    escreva(\"Testando Facets...\")\nfim_algoritmo",
+  "codigoTeste": "esperar_igual(atualizar_distancia(16.0), falso, \"Facet IF-ADDED bloqueou distância > 15km\")\nesperar_igual(atualizar_distancia(10.0), verdadeiro, \"Facet IF-ADDED aceitou distância válida\")\nesperar_igual(calcular_total_dinamico(), 60.0, \"Facet IF-NEEDED calculou dinamicamente: 40 + (10 * 2.0)\")"
+}
