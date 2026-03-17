@@ -1,0 +1,7 @@
+{
+  "id": "ontologia_tradutor",
+  "titulo": "Exercício 3: Ontologias (O Pesadelo da Integração)",
+  "descricao": "### Desafio\nPara somar custos de APIs diferentes, precisamos de uma Ontologia (um dicionário de tradução). Uma API manda `delivery_fee`, a outra manda `taxa_frete`, mas para o nosso sistema universal, ambas significam `Custo_Logistico`.\n\nComplete a função `traduzir_chave`. Use a função `.pegar(chave_procurada, valor_padrao)` na nossa ontologia. Se a chave existir, retorne a versão universal. Se não existir, retorne a própria chave original intacta.",
+  "codigoInicial": "algoritmo \"Ontologias\"\n\nvar\n    ontologia : dicionario\n\nfuncao traduzir_chave(chave_api_externa)\n    // Tente buscar a chave_api_externa dentro do dicionário ontologia.\n    // Dica de ouro: O segundo parâmetro do .pegar() é o que ele retorna se não achar nada!\n    \n    // ❌ ESCREVA SEU CÓDIGO AQUI\n    retorne \"\"\nfim_funcao\n\ninicio\n    ontologia <- {}\n    ontologia[\"taxa_frete\"] <- \"Custo_Logistico\"\n    ontologia[\"delivery_fee\"] <- \"Custo_Logistico\"\n    ontologia[\"motoboy\"] <- \"Agente_Logistico\"\n    \n    escreva(\"Ontologia carregada!\")\nfim_algoritmo",
+  "codigoTeste": "esperar_igual(traduzir_chave(\"delivery_fee\"), \"Custo_Logistico\", \"Traduziu a API da Lanchonete corretamente\")\nesperar_igual(traduzir_chave(\"taxa_frete\"), \"Custo_Logistico\", \"Traduziu a API da Pizzaria corretamente\")\nesperar_igual(traduzir_chave(\"user_code\"), \"user_code\", \"Manteve intacta a chave desconhecida (fallback)\")"
+}
